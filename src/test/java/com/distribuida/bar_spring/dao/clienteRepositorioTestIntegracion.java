@@ -55,9 +55,9 @@ public class clienteRepositorioTestIntegracion {
         Optional<cliente> clientes = clienteRepository.findById(2);
 
         assertTrue(clientes.isPresent(),"El cliente con id 1 no existe");
-        clientes.orElse(null).setNombre("Firmino");
-        clientes.orElse(null).setCarrera("Detecho");
-        clientes.orElse(null).setCorreo("test@gmail.com");
+        clientes.orElse(null).setNombre("Alextrovich");
+        clientes.orElse(null).setCarrera("Biomedicina");
+        clientes.orElse(null).setCorreo("alebio.16@gmail.com");
         clientes.orElse(null).setFechaRegistro(new Date());
 
         cliente clienteactualizado = clienteRepository.save(clientes.orElse(null));
