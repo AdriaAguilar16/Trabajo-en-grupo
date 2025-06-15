@@ -70,8 +70,8 @@ public class clienteServicioTestUntiaria {
     public void testupdateExistente(){
         cliente clienteActualizado = new cliente();
 
-        clienteActualizado.setNombre("Alexadra");
-        clienteActualizado.setCarrera("Software");
+        clienteActualizado.setNombre("Ivanova");
+        clienteActualizado.setCarrera("Gastronomia");
         clienteActualizado.setCorreo("<EMAIL>");
         clienteActualizado.setFechaRegistro(new java.util.Date());
 
@@ -80,7 +80,7 @@ public class clienteServicioTestUntiaria {
 
         cliente clienteExistente = clienteService.update(1,cliente);
         assertNotNull(clienteExistente);
-        assertEquals("Alexadra",clienteExistente.getNombre());
+        assertEquals("Ivanova",clienteExistente.getNombre());
         verify(clienteRepository, times(1)).save(cliente);
     }
 
