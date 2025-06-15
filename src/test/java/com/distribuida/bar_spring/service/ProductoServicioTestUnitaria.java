@@ -72,7 +72,7 @@ public class ProductoServicioTestUnitaria {
     public void testupdateExistente(){
         Producto productoActualizado = new Producto();
         productoActualizado.setIdProducto(1);
-        productoActualizado.setNombreProducto("Pizza");
+        productoActualizado.setNombreProducto("Croissant");
         productoActualizado.setPrecio(1.25);
         productoActualizado.setStock(5);
         when(productoRepository.findById(1)).thenReturn(java.util.Optional.of(producto));
@@ -87,7 +87,7 @@ public class ProductoServicioTestUnitaria {
     public void testupdateNoExistente(){
         Producto productoNuevo = new Producto();
         productoNuevo.setIdProducto(1);
-        productoNuevo.setNombreProducto("Pizza");
+        productoNuevo.setNombreProducto("Croissant");
         productoNuevo.setPrecio(1.25);
         productoNuevo.setStock(5);
         when(productoRepository.findById(1)).thenReturn(java.util.Optional.empty());
