@@ -30,10 +30,10 @@ public class promocionesServicioTestUnitaria {
     public void setUp(){
         promociones = new promociones();
         promociones.setIdPromocion(1);
-        promociones.setNombrepromocion("San ValenISMAC");
-        promociones.setDescripcion("Tortolos 3 x 1");
-        promociones.setFechaInicio("Lunes");
-        promociones.setFechaFin("Martes");
+        promociones.setNombrepromocion("40 ISMAC");
+        promociones.setDescripcion("Canelazos 2 x 1");
+        promociones.setFechaInicio("Jueves");
+        promociones.setFechaFin("Viernes");
         promociones.setActivo("Activo");
     }
 
