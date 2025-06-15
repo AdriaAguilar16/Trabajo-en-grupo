@@ -49,20 +49,20 @@ public class promocionesRepositorioTestIntegracion {
     public void update(){
         Optional<promociones> promociones = promocionesRepository.findById(1);
         assertTrue(promociones.isPresent(),"La promocion con ID 1 no existe");
-        promociones.orElse(null).setNombrepromocion("Navidad");
-        promociones.orElse(null).setDescripcion("Solo por noche buena");
+        promociones.orElse(null).setNombrepromocion("Hallowen");
+        promociones.orElse(null).setDescripcion("Solo por hallowen");
         promociones.orElse(null).setDescuento(24.23);
-        promociones.orElse(null).setFechaInicio("Miercoles 24");
-        promociones.orElse(null).setFechaFin("Jueves 25");
+        promociones.orElse(null).setFechaInicio("Viernes 31");
+        promociones.orElse(null).setFechaFin("Viernes 31");
         promociones.orElse(null).setActivo("Activo");
 
         promociones promocionesActualizado = promocionesRepository.save(promociones.orElse(null));
         assertNotNull(promocionesActualizado.getIdPromocion(),"La promocion con el ID no se guardo");
-        assertEquals("Navidad", promocionesActualizado.getNombrepromocion());
-        assertEquals("Solo por noche buena", promocionesActualizado.getDescripcion());
+        assertEquals("Hallowen", promocionesActualizado.getNombrepromocion());
+        assertEquals("Solo por hallowen", promocionesActualizado.getDescripcion());
         assertEquals(24.23, promocionesActualizado.getDescuento());
-        assertEquals("Miercoles 24", promocionesActualizado.getFechaInicio());
-        assertEquals("Jueves 25", promocionesActualizado.getFechaFin());
+        assertEquals("Viernes 31", promocionesActualizado.getFechaInicio());
+        assertEquals("Viernes 31", promocionesActualizado.getFechaFin());
         assertEquals("Activo", promocionesActualizado.getActivo());
     }
     @Test
